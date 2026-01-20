@@ -382,25 +382,119 @@ body, html {
     
 }
 
+.podcast-details-section {
+    background-color: #0f051d;
+    padding: 100px 0;
+    color: #ffffff;
+}
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-heading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.episodes-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+.episode-item{
+    background-color: #1a0b2e;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.episode-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.episode-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+.episode-media iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.episode-body {
+    padding: 24px;
+}
+.episode-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.episode-body p {
+    font-size: 0.95rem;
+    color: #b0a3c4;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.episode-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #00ffa3;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.meet-host {
+    margin-top: 80px;
+}
 
+.host-profile-card {
+    background-color: #1a0b2e;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+.host-avatar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.host-name {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.host-bio {
+    color: #b0a3c4;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+.host-social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.social-icon:hover {
+    color: #0f051d;
+    transform: scale(1.1);
+}
 
 
 
@@ -471,6 +565,28 @@ body, html {
 
     .feature-card {
         padding: 35px;
+    }
+    .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .episodes-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .host-profile-card {
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .host-avatar img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .host-name {
+        font-size: 2.5rem;
     }
 
 }
@@ -642,6 +758,50 @@ body, html {
     .feature-card:hover {
         transform: translateY(-5px);
     }
+    .podcast-details-section {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .episodes-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+    .host-profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .host-avatar img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .host-name {
+        font-size: 2rem;
+    }
+
+    .host-bio {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .host-social-links {
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
 
 
@@ -667,5 +827,8 @@ body, html {
             "headphone mobile mobile"
             "headphone global global"
             "exclusive exclusive book";
+    }
+    .episodes-wrapper {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
