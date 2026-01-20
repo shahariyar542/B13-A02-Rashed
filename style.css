@@ -1,0 +1,110 @@
+.inter-font{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+body{
+    background-color: #69439e;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 200px;
+    background-color: #412567;
+    border-bottom: 1px solid gray;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo span{
+    background: linear-gradient(15deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.nav-link li a {
+    text-decoration: none;
+    color: #e5d1d1;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-link li a:hover{
+    color: #ebd189;
+}
+
+.btn-nav{
+    background: linear-gradient(20deg,  #F7E93F, #FB09B4, #9100F8);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: transform 0.1s ease;
+}
+.btn-nav:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/* For Tablet Device (Medium Screen: 769px to 1024px) */
+
+@media (max-width: 1024px){
+    .navbar{
+        padding: 16px 50px;
+    }
+    .logo {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+/* For Mobile Device (Small Screen: <=768px ) */
+@media (max-width: 768px) {
+    .navbar{
+        padding: 12px 20px;
+    }
+
+    .logo{
+        font-size: 2rem;
+    }
+    .nav-link{
+        display: none; 
+    }
+    .btn-nav{
+        display: none;
+    }
+    .navbar::after{
+        content: '\2630';
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+        display: block;
+    }
+}
