@@ -236,7 +236,7 @@ body, html {
 }
 
 .about-content h2{
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 25px;
 }
@@ -288,15 +288,99 @@ body, html {
 }
 
 
+.feature {
+    background-color: #230E3D;
+    padding: 100px 0;
+    color: white;
+}
+.feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4%;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto auto; 
+    gap: 25px;
+}
+.feature-card{
+    background-color: rgba(53, 17, 101, 0.4);
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
 
+.feature-card:hover{
+    transform: translateX(-5px);
+}
 
+.icon-box img, .icon-box i {
+    width: 45px;
+    height: auto;
+    font-size: 40px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
 
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.feature-card p {
+    color: #b0a3c4;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+.fa-bolt-lightning{
+    background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.premium-audio{
+    display: flex;
+    justify-content: center;
+}
 
+.premium-audio{ 
+    grid-area: headphone; 
+}
+.mobile-friendly{
+    grid-area: mobile; 
+}
+.global-community{ 
+    grid-area: global; 
+}
+.exclusive-interviews{ 
+    grid-area: exclusive;
+}
+.rich-resources{ 
+    grid-area: book; 
+}
 
-
-
-
+.features-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+    grid-template-areas: 
+        "headphone mobile mobile"
+        "headphone global global"
+        "exclusive exclusive book";
+    
+}
 
 
 
@@ -369,6 +453,24 @@ body, html {
 
     .stat-item h3 {
         font-size: 2.5rem;
+    }
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-areas: 
+            "headphone headphone"
+            "mobile global"
+            "exclusive exclusive"
+            "book book";
+    }
+
+    .feature-card {
+        padding: 35px;
     }
 
 }
@@ -475,7 +577,7 @@ body, html {
     }
 
     .grid {
-        flex-direction: column; /* মোবাইলে সব আইটেম নিচে নিচে আসবে */
+        flex-direction: column;
         gap: 10px;
     }
 
@@ -490,8 +592,55 @@ body, html {
     }
 
     .stat-label {
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 1px;
+    }
+    .feature {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .features-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .premium-audio, 
+    .mobile-friendly, 
+    .global-community, 
+    .exclusive-interviews, 
+    .rich-resources {
+        grid-area: auto;
+    }
+    .section-title{
+        font-size: 2rem;
+    }
+
+    .feature-card {
+        padding: 25px;
+        text-align: left;
+    }
+
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-card p {
+        font-size: 0.95rem;
+    }
+
+    .icon-box img, .icon-box i {
+        width: 35px;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
     }
 }
 
@@ -509,5 +658,14 @@ body, html {
     
     .stat-item h3 {
         font-size: 2rem;
+    }
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        grid-template-areas: 
+            "headphone mobile mobile"
+            "headphone global global"
+            "exclusive exclusive book";
     }
 }
